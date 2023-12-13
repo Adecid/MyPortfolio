@@ -1,4 +1,3 @@
-
 Hi i am Peter Kolawole, 
 a passionate and skilled developer with a wide range of experience in various programming languages and technologies. 
 I'm always learning and expanding my knowledge, and i'm passionate about creating innovative and impactful solutions. In my free time, 
