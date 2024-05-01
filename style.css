@@ -20,35 +20,35 @@
     --bg-color: #f5f3ed;
     --bg-soft: #888888;
     --text-color: #000000;
-    --light-color: #101314;
-    --dark-color: hsl(240, 33%, 1%);
-    --dark-color-2: #161616;
+    --sub-text-color: #131313;
+    --social-color: #161616;
+    --dark-color-2: #9d9d9d;
     --grey-color: #5f5f5f;
-    --main-color: #0a151d;
-    --primary-color-one: #56745f;
-    --primary-color-two: #69fff8e7;
-    --bottom-box-bg: rgb(7, 7, 22);
+    --head-color: #161616;
     --track-color: #cde8fc;
     --thumb-color: #9ec2db;
-    --side-border: #000911;
+    
+    --primary-color-one: #56745f;
+    --primary-color-two: #69fff8e7;
+    
+    --dark-color: hsl(240, 33%, 1%);
     --rgb-color: rgba(206, 224, 224, 0.25);
-    --rgb-color-3: rgba(0, 0, 0, 0.05);
     --span-shadow: rgba(0, 0, 0, 0.15);
 }
 /************************** dark theme *************************/
 body.switch {
-    --bg-color: #36454F;
-    --bg-soft: #0a151d;
+    --bg-color: #000000;
     --text-color: #ffffff;
-    --light-color: #ebd5bc;
+    --sub-text-color: #c2c2c2;
     --dark-color: #ebd5bc;
-    --primary-color-one: #555555;
-    --primary-color-two: #696eff;
+    --head-color: #f1f1f1;
     --track-color: #10344e;
     --thumb-color: #0c2333;
-    --side-border: #f3f2f1;
+
+    --primary-color-one: #555555;
+    --primary-color-two: #696eff;
+
     --rgb-color: rgba(0, 21, 29, 0.25);
-    --rgb-color-3: rgba(255, 255, 255, 0.05);
     --span-shadow: rgba(15, 15, 15, 0.97);
 }
 /************************** scrollbar styling *************************/
@@ -103,7 +103,7 @@ header {
     font-size: 22px;
     font-weight: 600;
     letter-spacing: .8px;
-    color: var(--light-color);
+    color: var(--text-color);
     transition: all 0.3s ease;
     font-family: 'Bricolage Grotesque', sans-serif;
 }
@@ -169,7 +169,7 @@ header.sticky {
 }
 .switch-mode i {
     position: absolute;
-    color: var(--light-color);
+    color: var(--text-color);
     font-size: 22px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -204,6 +204,7 @@ main {
     text-transform: uppercase;
     margin-bottom: 4px;
     font-family: 'Bricolage Grotesque', sans-serif;
+    color: var(--text-color);
 }
 .home-text .home-link {
     display: flex;
@@ -240,7 +241,7 @@ main {
     content: '';
     width: 50px;
     height: 50px;
-    background: #000000;
+    background: var(--social-color);
     border-radius: 50%;
     inset: 50%;
     transform: translate(-50%, -50%);
@@ -630,7 +631,7 @@ main {
     font-size: 1.2rem;
     padding: 7px;
     border-radius: 10px;
-    background: var(--dark-color-2);
+    background: var(--social-color);
     transition: 0.3s;
 }
 .socials a:nth-child(1) {
@@ -764,7 +765,7 @@ main {
 .about-container .about-transparent {
     width: 80%;
     height: 200px;
-    background: rgba(0, 14, 5, 0.15);
+    background: rgba(119, 119, 119, 0.15);
     position: relative;
     border-left: 10px solid var(--primary-color-one);
     border-radius: 10px;
@@ -847,14 +848,14 @@ main {
     text-align: center;
 }
 .skills .skills-span-text {
-    color: var(--text-color);
+    color: var(--sub-text-color);
     font-size: .9rem;
     font-weight: 500;
     text-transform: uppercase;
     line-height: 1;
 }
 .skills .skills-head-text {
-    color: var(--main-color);
+    color: var(--head-color);
     font-size: 2rem;
 }
 .skills-container {
@@ -869,7 +870,7 @@ main {
 }
 .skills-content h2 {
     text-align: center;
-    color: var(--text-color);
+    color: var(--sub-text-color);
     font-size: 20px;
     letter-spacing: .7px;
     margin-bottom: 27px;
@@ -894,11 +895,11 @@ main {
     gap: 5px;
 }
 .skills-text i {
-    color: var(--main-color);
+    color: var(--head-color);
     font-size: 18px;
 }
 .skills-text h4 {
-    -webkit-text-stroke: .9px var(--dark-color);
+    -webkit-text-stroke: .9px var(--text-color);
     color: transparent;
     letter-spacing: 1px;
     font-size:1rem ;
@@ -960,6 +961,9 @@ main {
 }
 
 /************************** service styling *************************/
+.service {
+    position: relative;
+}
 .service .service-span-text,
 .service .service-head-text {
     display: inline-block;
@@ -967,13 +971,13 @@ main {
     text-align: center;
 }
 .service .service-span-text {
-    color: var(--text-color);
+    color: var(--sub-text-color);
     font-size: .9rem;
     font-weight: 500;
     text-transform: uppercase;
 }
 .service .service-head-text {
-    color: var(--main-color);
+    color: var(--head-color);
     margin-bottom: 33px;
     font-size: 2rem;
 }
@@ -983,6 +987,18 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     align-items: center;
     gap: 2rem;
+}
+.gradient-color {
+    position: absolute;
+    background: linear-gradient(-90deg, transparent, var(--primary-color-one), var(--primary-color-two));
+    border-radius: 50%;
+    opacity: .13;
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+    top: 20%;
+    left: 17%;
+    filter: blur(12px);
 }
 .service-container .service-content {
     position: relative;
@@ -1018,7 +1034,7 @@ main {
 }
 .service-text i {
     font-size: 25px;
-    color: var(--light-color);
+    color: var(--text-color);
 }
 .service-text .service-head {
     font-size: 25px;
@@ -1028,7 +1044,7 @@ main {
     cursor: pointer;
     display: flex;
     align-items: center;
-    color: var(--main-color);
+    color: var(--head-color);
 }
 .service-click i {
     font-size: 23px;
@@ -1046,7 +1062,7 @@ main {
     padding: 20px 34px;
     display: grid;
     place-items: center;
-    color: var(--light-color);
+    color: var(--text-color);
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
@@ -1103,6 +1119,14 @@ main {
     cursor: pointer;
 }
 
+@media screen and (max-width:1100px) {
+    .gradient-color {
+        top: 25%;
+        left: 50%;
+        transform: translateY(-25%, -50%);
+    }
+}
+
 /************************** span styling *************************/
 .span-text .span-text-1,
 .span-text .span-text-2 {
@@ -1142,13 +1166,13 @@ main {
     text-align: center;
 }
 .work .work-span-text {
-    color: var(--text-color);
+    color: var(--sub-text-color);
     font-size: .9rem;
     font-weight: 500;
     text-transform: uppercase;
 }
 .work .work-head-text {
-    color: var(--main-color);
+    color: var(--head-color);
     margin-bottom: 33px;
     font-size: 1.7rem;
 }
@@ -1168,7 +1192,7 @@ main {
 }
 .work-list.active-item {
     background: #544745;
-    color: var(--light-color);
+    color: var(--text-color);
 }
 .work-list i {
     font-size: 17px;
@@ -1198,7 +1222,7 @@ main {
 }
 .portfolio-text {
     position: relative;
-    color: var(--light-color);
+    color: var(--text-color);
     width: 100%;
     text-align: right;
     padding: 0 18px 0 0;
@@ -1264,10 +1288,10 @@ main {
     margin: 0 auto;
 }
 .contact .contact-span-text {
-    color: var(--text-color);
+    color: var(--sub-text-color);
 }
 .contact .contact-head-text{
-    color: var(--main-color);
+    color: var(--head-color);
     margin-bottom: 33px;
 }
 .contact .contact-container {
@@ -1300,7 +1324,7 @@ main {
 }
 .contact-card .contact-head {
     font-size: 1rem;
-    color: var(--dark-color);
+    color: var(--dark-color-2);
     text-transform: uppercase;
     margin-bottom: 6px;
     font-weight: 500;
@@ -1321,7 +1345,7 @@ main {
     position: relative;
     height: 4rem;
     margin-bottom: 20px;
-    border-bottom: 1px solid var(--light-color);
+    border-bottom: 1px solid var(--grey-color);
 }
 .form-content .form-input {
     position: absolute;
@@ -1334,7 +1358,7 @@ main {
     padding: 1.5rem;
     border-radius: inherit;
     z-index: 1;
-    color: var(--light-color);
+    color: var(--text-color);
 }
 .form-content .form-label {
     position: absolute;
@@ -1360,7 +1384,7 @@ main {
     padding: 13px 0;
     background: var(--primary-color-one);
     border: none;
-    color: var(--light-color);
+    color: var(--text-color);
     font-size: 15px;
     cursor: pointer;
     transition: all .40s ease;
