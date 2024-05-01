@@ -992,7 +992,7 @@ main {
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: .13;
+    opacity: .1;
     filter: blur(12px);
 }
 .gradient-color::before {
@@ -1010,8 +1010,8 @@ main {
     position: absolute;
     width: 400px;
     height: 400px;
-    right: 15%;
-    bottom: 5%;
+    right: 5%;
+    bottom: 8%;
     background: linear-gradient(90deg, transparent, var(--primary-color-one), var(--primary-color-two));
     border-radius: 20%;
 }
