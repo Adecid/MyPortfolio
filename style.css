@@ -215,7 +215,7 @@ main {
 .home-link .home-para {
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--dark-color-2);
+    color: var(--grey-color);
     line-height: 1.7;
     min-width: 250px;
     align-self: baseline;
