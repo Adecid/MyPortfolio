@@ -587,6 +587,7 @@ main {
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 1.4px;
+    color: var(--text-color);
 }
 .bottom-text .border {
     width: 70%;
